@@ -4,7 +4,13 @@ const app = express()
 
 const PORT = 5000
 
+// setup static and middleware
 app.use(express.static('./public'))
+
+//There are two ways to send file or HTML
+// one is to put all of them in static
+// other one is SSR
+// So you probably won't use sendfile
 
 app.get("/" , (req, res)=>{
     console.log('User hit the resource')
